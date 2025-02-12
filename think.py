@@ -216,8 +216,3 @@ app.include_router(create_router(Table2, "table2"), prefix="/table2")
 app.include_router(create_router(Table3, "table3"), prefix="/table3")
 app.include_router(create_custom_router(), prefix="/custom")
 app.include_router(create_question_router(), prefix="/questions")
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
-
