@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException, Depends, APIRouter
+import os
 from pydantic import BaseModel
 from typing import Optional
 from sqlalchemy import create_engine, Column, Integer, String, Boolean
@@ -6,7 +7,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, Session
 
 # Database setup
-SQLALCHEMY_DATABASE_URL = "sqlite:///./think.db"
+SQLALCHEMY_DATABASE_URL = os.getenv("postgresql://postgres:mzJriHCeFPVLDhkUvGpdqdMgyuAkpjLF@junction.proxy.rlwy.net:41933/railway")
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
