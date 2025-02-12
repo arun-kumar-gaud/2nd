@@ -7,7 +7,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, Session
 
 # Database setup
-SQLALCHEMY_DATABASE_URL = os.getenv("postgresql://postgres:mzJriHCeFPVLDhkUvGpdqdMgyuAkpjLF@junction.proxy.rlwy.net:41933/railway")
+SQLALCHEMY_DATABASE_URL = os.getenv("postgresql://think_bheo_user:p6jMavvhASSyCT7n6CunyA7erdluWl0Y@dpg-cum67l5umphs738dfe40-a.oregon-postgres.render.com/think_bheo")
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
